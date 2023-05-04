@@ -3,18 +3,18 @@ import React, { useState } from "react";
 
 function App() {
   const [result, setResult] = useState("Lets go play");
-  const [firstImg, setFirstImg] = useState(process.env.PUBLIC_URL + "dice6.png");
-  const [secondImg, setSecondImg] = useState(process.env.PUBLIC_URL + "dice6.png");
+  const [firstImg, setFirstImg] = useState("dice6.png");
+  const [secondImg, setSecondImg] = useState("dice6.png");
 
   function playGame() {
     //Random images 1
     const randomNumber1 = Math.floor(Math.random() * 6) + 1; //Визначаємо рандомне число від 1 до 6
-    const randomSerch1 = process.env.PUBLIC_URL +"dice" + randomNumber1 + ".png"; // Задаємо шлях
+    const randomSerch1 ="dice" + randomNumber1 + ".png"; // Задаємо шлях
     setFirstImg(randomSerch1);
 
     // Random images 2
     const randomNumber2 = Math.floor(Math.random() * 6) + 1;
-    const randomSerch2 =process.env.PUBLIC_URL + "dice" + randomNumber2 + ".png";
+    const randomSerch2 ="dice" + randomNumber2 + ".png";
     setSecondImg(randomSerch2);
 
     //Answer to h1
@@ -32,8 +32,8 @@ function App() {
 
   function resetGame() {
     setResult("Push Play");
-    setFirstImg(process.env.PUBLIC_URL + "dice6.png");
-    setSecondImg(process.env.PUBLIC_URL + "dice6.png");
+    setFirstImg("dice6.png");
+    setSecondImg("dice6.png");
   }
 
   return (
