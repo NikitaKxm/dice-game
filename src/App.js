@@ -31,7 +31,7 @@ function App() {
   const year = yearCounter.getFullYear();
 
   function resetGame() {
-    setResult("Push Play");
+    setResult("Push To Play");
     setFirstImg("dice6.png");
     setSecondImg("dice6.png");
   }
